@@ -1,0 +1,7 @@
+.venv
+.ipynb_checkpoints
+graphs
+# Ignore specific data files
+data/merged-kg_edges.tsv
+data/merged-kg_nodes.tsv
+data/merged-kg.tar.gz
