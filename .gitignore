@@ -5,3 +5,4 @@ graphs
 data/merged-kg_edges.tsv
 data/merged-kg_nodes.tsv
 data/merged-kg.tar.gz
+*.tsv.gz
