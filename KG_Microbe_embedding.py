@@ -5,10 +5,10 @@
 # source /global/cfs/cdirs/m4689/kg-microbe-projects/venv/bin/activate
 
 # untar if data/merged-kg_edges.tsv and data/merged-kg_nodes.tsv are not present
-import os 
+import os
 if not os.path.exists("data/merged-kg_edges.tsv") or not os.path.exists("data/merged-kg_nodes.tsv"):
     # !tar -xzf data/merged-kg.tar.gz via system call
-    os.system("tar -xzf data/merged-kg.tar.gz")    
+    os.system("tar -xzf data/merged-kg.tar.gz")
 
 
 from grape import Graph
@@ -88,9 +88,9 @@ embedding_result = EmbeddingResult(
 
 
 from grape import GraphVisualizer
-visualizer = GraphVisualizer(kg_microbe).fit_and_plot_all(degree_normalized_deepwalk_embedding)
-visualizer.fit_and_plot_all(degree_normalized_deepwalk_embedding)
+visualizer = GraphVisualizer(kg_microbe).fit_and_plot_all(degree_normalized_deepwalk_embedding, verbose=True)
+visualizer.fit_and_plot_all(degree_normalized_deepwalk_embedding, verbose=True)
 plt.savefig('../output/DeepWalkSkipGramEnsmallen.png')
 plt.savefig('../output/DeepWalkSkipGramEnsmallen.pdf')
-plt.close() 
+plt.close()
 
